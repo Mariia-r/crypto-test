@@ -1,0 +1,475 @@
+@font-face {
+    font-family: Gotham;
+    src: local(Gotham-Bold),
+      url(./fonts/Gotham-Bold.otf) format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  
+@font-face {
+    font-family: GothamPro;
+    src: local(GothamPro-Medium),
+      url(./fonts/GothamPro-Medium.woff2) format("woff2"),
+      url(./fonts/GothamPro-Medium.woff) format("woff"),
+      url(./fonts/GothamPro-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+  
+@font-face {
+    font-family: Roboto;
+    src: local(Roboto-Regular),
+      url(./fonts/Roboto-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+  
+*, *before, *:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --grape-purple: #331139;
+}
+
+
+main {
+    width: 1440px;
+    height: 821px;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "header-logo header-nav header-btn";
+    grid-template-columns: 522px 555px 363px;
+    margin-top: 24px;
+    margin-left: 147px;
+    height: 19px;
+}
+
+.bg-crypto {
+    width: 1440px;
+    height: 820px;
+    object-fit: contain;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main-text main-form";
+    grid-template-columns: 60% 40%;
+    background-image: url(img/bg-crypto.jpg);
+    background-image: -webkit-image-set(
+      url(img/bg-crypto@2x.jpg) 2x,
+      url(img/bg-crypto@3x.jpg) 3x,
+    );
+    background-image: image-set(
+      url(img/bg-crypto@2x.jpg) 2x,
+      url(img/bg-crypto@3x.jpg) 3x,
+    );
+}
+.cryptoexch {
+    grid-area: header-logo;
+}
+.header-nav {
+    grid-area: header-nav;
+}
+.header-btn {
+    grid-area: header-btn;
+}
+.main-text {
+    grid-area: main-text;
+}
+.main-form {
+    grid-area: main-form;
+}
+
+.cryptoexch {
+    width: 193px;
+    height: 35px;
+    object-fit: contain;
+    position: relative;
+    top: -10px;
+}
+
+.header-nav {
+    width: 555px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.header-nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+}
+
+.header-nav li {
+    display: block;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #000000;
+}
+ 
+.header-btn {
+    width: 162px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: var(--grape-purple);
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -7px;
+}
+
+.main-text {
+    margin-left: 142px;
+}
+
+.main-title {
+    width: 541px;
+    height: 96px;
+    font-family: Gotham;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333333;
+}
+
+.main-subtitle {
+    width: 444px;
+    height: 91px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #341139;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.trustpilot {
+    width: 145px;
+    height: 71px;
+    object-fit: contain;
+}
+
+.main-form {
+    width: 444px;
+    height: 495px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+form {
+    padding: 40px 23px 28px 21px; 
+}
+
+.main-form-legend {
+    width: 388px;
+    height: 21px;
+    font-family: Gotham;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #212121;
+    margin: 0px;
+}
+
+.currency {
+    display: flex; 
+    margin: 33px 0px;
+}
+
+.currency > div {
+    width: 126px;
+    border-radius: 3px;
+    border: solid 1px #efefef;
+    margin-right: 16px;
+    padding: 8px 19px;
+}
+
+.currency > div:last-child {
+    margin-right: 0px;
+}
+
+.bitcoin-visa, .bitcoin-etherium, .bitcoin-advcash {
+    display: flex;
+    cursor: pointer;
+}
+
+.bitcoin-visa > img, .bitcoin-etherium > img, .bitcoin-advcash > img{
+    flex: 1 0 auto;
+}
+
+.bitcoin {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.arrow-right {
+    width: 12px;
+    height: 8px;
+    object-fit: contain;
+    padding-top: 9px;
+}
+
+.card {
+    width: 27px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.etherium {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.advcash {
+    width: 27px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.exchangeCurrency {
+    border-radius: 3px;
+    border: solid 1px #efefef;
+    padding: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 107px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #a3a3a3;
+}
+
+input, #receivedAmount {
+    width: 48px;
+    height: 28px;
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #212121;
+    border: none;
+    outline: 0ch;
+}
+
+.exchangeCurrency > div {
+    width: 50%;
+}
+
+
+.transferFee {
+    margin-bottom: 23px;
+    margin-top: 8px;
+    padding-left: 11px;
+    width: 171px;
+    height: 16px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #a3a3a3;
+}
+
+.transferFee > span:nth-child(2) {
+    font-family: GothamPro;
+    font-weight: 500;
+    color: #212121;
+}
+
+.agreeRules {
+    margin-left: 3px;
+}
+
+input[type="checkbox"] + label {
+    width: 218px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #212121;
+}
+
+.agreeRules input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label:before {
+    content: "\2714";
+    border: 1px solid black;
+    border-radius: 0.2em;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 16px;
+    width: 16px;
+    height: 17px;
+    color: transparent;
+} 
+
+input[type="checkbox"]:checked + label:before {
+    content: "\2714";
+    color: white;
+    background-color: var(--grape-purple);
+    border: 1px solid white;
+}
+
+.submit {
+    width: 240px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: var(--grape-purple);
+    color: white;
+    font-family: GothamPro;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    float: right;
+    margin-top: 25px;
+}
+
+select {
+    height: 19px;
+    font-family: Roboto;
+    color: #212121;
+    border: none;
+}
+
+option {
+    width: 248px;
+}
+
+.visa {
+     background-image: url(./img/card.png);
+ }
+
+
+
+select {
+    width: 200px;
+}
+
+ option {
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+option:hover {
+    background-color: #eee;
+}
+
+.icon-visa {
+    background: url('./img/card.png') no-repeat;
+    background-size: 20px;
+    padding-left: 20px;
+    background-position: 0 1px;
+}
+
+ 
+.icon-etherium {
+    background: url('./img/etherium.png') no-repeat;
+    background-size: 20px;
+    padding-left: 20px;
+    background-position: 0 1px;
+}
+
+.icon-advcash {
+    background: url('./img/advcash.png') no-repeat;
+    background-size: 20px;
+    padding-left: 20px;
+    background-position: 0 1px;
+}
+
+.icon-bitcoin {
+    background: url('./img/bitcoin.png') no-repeat;
+    background-size: 20px;
+    padding-left: 20px;
+    background-position: 0 1px;
+}
+
+select.icon-visa,
+select.icon-etherium,
+select.icon-advcash,
+select.icon-bitcoin {
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    background-position: 0 1px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 10px 0 #331139;
+}
+
+
+    

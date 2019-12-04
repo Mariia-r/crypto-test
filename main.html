@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+  		<meta charset="utf-8"/>
+  		<title>Crypto</title>
+        <link rel="stylesheet" href='./main.css'>
+  </head>
+	<body>
+        <main class="main">
+            <div class="bg-crypto">
+                <header class="header">
+                    <img src="img/cryptoexch.svg" class="cryptoexch">
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a href="#">Обменять</a></li>
+                            <li><a href="#">Резервы</a></li>
+                            <li><a href="#">Как мы работаем</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Документы</a></li>
+                        </ul>
+                    </nav>
+                    <button class="header-btn">Личный кабинет</button>            
+                </header>
+                <div class="main-text">
+                    <h1 class="main-title">Меняйте валюты как вам удобно!</h1>
+                    <p class="main-subtitle">Просто выберите интересующую вас валюту из перечня доступных, 
+                        и мы обменяем ее по самому выгодному курсу.</p>
+                    <img src="img/trustpilot.jpg"
+                        srcset="img/trustpilot@2x.jpg 2x,
+                                img/trustpilot@3x.jpg 3x"
+                        class="trustpilot">
+                </div>
+                <div class="main-form">
+                    <form action="#" method="post">
+                        <h3 class="main-form-legend">Выберете одно из направлений обмена</h3>
+                        <div class="currency">
+                            <div class="bitcoin-visa" onclick="selectionCurrency('bitcoin', 'visa')">
+                                    <img src="img/bitcoin.png"
+                                        srcset="img/bitcoin@2x.png 2x,
+                                                img/bitcoin@3x.png 3x"
+                                        class="bitcoin">
+                                    <img src="img/arrow-right.svg"
+                                         class="arrow-right">   
+                                    <img src="img/card.png"
+                                    srcset="img/card@2x.png 2x,
+                                            img/card@3x.png 3x"
+                                    class="card">      
+                            </div>
+                            <div class="bitcoin-etherium" onclick="selectionCurrency('bitcoin', 'etherium')">
+                                <img src="img/bitcoin.png"
+                                     srcset="img/bitcoin@2x.png 2x,
+                                             img/bitcoin@3x.png 3x"
+                                     class="bitcoin">
+                                <img src="img/arrow-right.svg"
+                                     class="arrow-right">
+                                <img src="img/etherium.png"
+                                     srcset="img/etherium@2x.png 2x,
+                                             img/etherium@3x.png 3x"
+                                     class="etherium">
+                            </div>
+                            <div class="bitcoin-advcash" onclick="selectionCurrency('bitcoin', 'advcash')">
+                                <img src="img/bitcoin.png"
+                                     srcset="img/bitcoin@2x.png 2x,
+                                             img/bitcoin@3x.png 3x"
+                                     class="bitcoin">
+                                <img src="img/arrow-right.svg"
+                                     class="arrow-right">
+                                <img src="img/advcash.png"
+                                     srcset="img/advcash@2x.png 2x,
+                                             img/advcash@3x.png 3x"
+                                     class="advcash">
+                            </div>
+                        </div>
+                        <div class="exchangeCurrency">
+                                <div>
+                                    <label for="departAmount">Вы отправляете:</label>
+                                    <div>
+                                        <input type="number" min="1" max="9999" id="departAmount" name="departAmount" value="1000" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <select name="fromCurrency" class="selectFromCurrency" size="4">
+                                        <option value="visa" class="icon-visa">Visa/MasterCard UAH</option>
+                                        <option value="etherium" class="icon-etherium">Etherium</option>
+                                        <option value="advcash" class="icon-advcash">Advcash</option>
+                                        <option value="bitcoin" class="icon-bitcoin">Bitcoin</option>
+                                    </select>
+                            </div> 
+                        </div>
+                        <div class="transferFee">
+                            <span>Комиссия за обмен:</span>
+                            <span>23 UAH</span>
+                        </div>
+                        <div class="exchangeCurrency">
+                            <div>
+                                <label for="receivedAmount">Вы получите:</label>
+                                <div id="receivedAmount">
+                                    1000
+                                </div>
+                            </div>
+                            <div>
+                                <select name="toCurrency" class="selectToCurrency">
+                                    <option value="visa" data-image="./img/card.png">Visa/MasterCard UAH</option>
+                                    <option value="etherium" data-image="./img/etherium.png">Etherium</option>
+                                    <option value="advcash" data-image="./img/advcash.png">Advcash</option>
+                                    <option value="bitcoin" data-image="./img/bitcoin.png">Bitcoin</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="agreeRules">
+                            <input type="checkbox" id="agreeRules" name="agreeRules" value="agreeRules"/>
+                            <label for="agreeRules">Я согласен с правилами сервиса</label>
+                        </div>
+                        <div>
+                            <button class="submit" type="submit">Обменять</button>
+                        </div>
+                    </form>
+                </div>
+            </div>     
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.min.js"></script>
+        <script src="main.js"></script>
+	</body>
+</html>
