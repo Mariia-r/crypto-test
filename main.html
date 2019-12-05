@@ -19,11 +19,11 @@
                             <li><a href="#">Документы</a></li>
                         </ul>
                     </nav>
-                    <button class="header-btn">Личный кабинет</button>            
+                    <button class="header-btn">Личный кабинет</button>
                 </header>
                 <div class="main-text">
                     <h1 class="main-title">Меняйте валюты как вам удобно!</h1>
-                    <p class="main-subtitle">Просто выберите интересующую вас валюту из перечня доступных, 
+                    <p class="main-subtitle">Просто выберите интересующую вас валюту из перечня доступных,
                         и мы обменяем ее по самому выгодному курсу.</p>
                     <img src="img/trustpilot.jpg"
                         srcset="img/trustpilot@2x.jpg 2x,
@@ -34,19 +34,19 @@
                     <form action="#" method="post">
                         <h3 class="main-form-legend">Выберете одно из направлений обмена</h3>
                         <div class="currency">
-                            <div class="bitcoin-visa" onclick="selectionCurrency('bitcoin', 'visa')">
+                            <div class="bitcoin-card" onclick="selectionCurrency('Bitcoin', 'Card')">
                                     <img src="img/bitcoin.png"
                                         srcset="img/bitcoin@2x.png 2x,
                                                 img/bitcoin@3x.png 3x"
                                         class="bitcoin">
                                     <img src="img/arrow-right.svg"
-                                         class="arrow-right">   
+                                         class="arrow-right">
                                     <img src="img/card.png"
                                     srcset="img/card@2x.png 2x,
                                             img/card@3x.png 3x"
-                                    class="card">      
+                                    class="card">
                             </div>
-                            <div class="bitcoin-etherium" onclick="selectionCurrency('bitcoin', 'etherium')">
+                            <div class="bitcoin-etherium" onclick="selectionCurrency('Bitcoin', 'Etherium')">
                                 <img src="img/bitcoin.png"
                                      srcset="img/bitcoin@2x.png 2x,
                                              img/bitcoin@3x.png 3x"
@@ -58,7 +58,7 @@
                                              img/etherium@3x.png 3x"
                                      class="etherium">
                             </div>
-                            <div class="bitcoin-advcash" onclick="selectionCurrency('bitcoin', 'advcash')">
+                            <div class="bitcoin-advcash" onclick="selectionCurrency('Bitcoin', 'Advcash')">
                                 <img src="img/bitcoin.png"
                                      srcset="img/bitcoin@2x.png 2x,
                                              img/bitcoin@3x.png 3x"
@@ -79,13 +79,13 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <select name="fromCurrency" class="selectFromCurrency" size="4">
-                                        <option value="visa" class="icon-visa">Visa/MasterCard UAH</option>
-                                        <option value="etherium" class="icon-etherium">Etherium</option>
-                                        <option value="advcash" class="icon-advcash">Advcash</option>
-                                        <option value="bitcoin" class="icon-bitcoin">Bitcoin</option>
-                                    </select>
-                            </div> 
+																	<select name="fromCurrency" id="selectFromCurrency">
+																			<option value="card" data-imagesrc="./img/card.png" selected="selected">Visa/MasterCard UAH</option>
+																			<option value="etherium" data-imagesrc="./img/etherium.png">Etherium</option>
+																			<option value="advcash" data-imagesrc="./img/advcash.png">Advcash</option>
+																			<option value="bitcoin" data-imagesrc="./img/bitcoin.png">Bitcoin</option>
+																	</select>
+                            </div>
                         </div>
                         <div class="transferFee">
                             <span>Комиссия за обмен:</span>
@@ -99,11 +99,11 @@
                                 </div>
                             </div>
                             <div>
-                                <select name="toCurrency" class="selectToCurrency">
-                                    <option value="visa" data-image="./img/card.png">Visa/MasterCard UAH</option>
-                                    <option value="etherium" data-image="./img/etherium.png">Etherium</option>
-                                    <option value="advcash" data-image="./img/advcash.png">Advcash</option>
-                                    <option value="bitcoin" data-image="./img/bitcoin.png">Bitcoin</option>
+																<select name="toCurrency" id="selectToCurrency">
+                                    <option value="card" data-imagesrc="./img/card.png" selected="selected">Visa/MasterCard UAH</option>
+                                    <option value="etherium" data-imagesrc="./img/etherium.png">Etherium</option>
+                                    <option value="advcash" data-imagesrc="./img/advcash.png">Advcash</option>
+                                    <option value="bitcoin" data-imagesrc="./img/bitcoin.png">Bitcoin</option>
                                 </select>
                             </div>
                         </div>
@@ -117,10 +117,10 @@
                         </div>
                     </form>
                 </div>
-            </div>     
+            </div>
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
         <script src="main.js"></script>
 	</body>
 </html>

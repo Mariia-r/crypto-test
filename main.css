@@ -6,7 +6,7 @@
     font-style: normal;
     font-stretch: normal;
   }
-  
+
 @font-face {
     font-family: GothamPro;
     src: local(GothamPro-Medium),
@@ -17,7 +17,7 @@
     font-style: normal;
     font-stretch: normal;
 }
-  
+
 @font-face {
     font-family: Roboto;
     src: local(Roboto-Regular),
@@ -33,7 +33,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-  
+
 *, *before, *:after {
     box-sizing: border-box;
 }
@@ -42,27 +42,14 @@ input::-webkit-inner-spin-button {
     --grape-purple: #331139;
 }
 
-
-main {
-    width: 1440px;
-    height: 821px;
-}
-
-.header {
-    grid-area: header;
-    display: grid;
-    grid-template-areas: "header-logo header-nav header-btn";
-    grid-template-columns: 522px 555px 363px;
-    margin-top: 24px;
-    margin-left: 147px;
-    height: 19px;
+body {
+  margin: 1px 0px;
 }
 
 .bg-crypto {
-    width: 1440px;
-    height: 820px;
+    width: 100%;
     object-fit: contain;
-    display: grid;
+    1display: grid;
     grid-template-areas:
         "header header"
         "main-text main-form";
@@ -77,6 +64,69 @@ main {
       url(img/bg-crypto@3x.jpg) 3x,
     );
 }
+
+.main-text {
+    margin-left: 17%;
+    margin-top: 25%;
+}
+
+.main-form {
+  margin-bottom: 20%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding-bottom: 15px;
+}
+
+.header {
+  margin-top: 24px;
+  margin-left: 10%;
+  height: 19px;
+}
+
+@media (max-width: 1001px) {
+  .main-form {
+    margin-top: 10px;
+    width: 450px;
+    height: 475px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+  }
+  .main-text {
+    width: 100%;
+    margin-top: 120px;
+    margin-left: 10%;
+  }
+  .header-btn {
+    left: 0%;
+    top: 0px;
+    margin: 5px 0px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-form {
+    width: 89%;
+    margin-top: 30%;
+  }
+  .main-text {
+    width: 85%;
+  }
+  .bg-crypto {
+    display: grid;
+  }
+  .header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "header-logo header-nav header-btn";
+    grid-template-columns: 36% 39% 25%;
+  }
+  .header-btn {
+    top: -7px;
+    left: 30%;
+  }
+}
+
 .cryptoexch {
     grid-area: header-logo;
 }
@@ -85,6 +135,13 @@ main {
 }
 .header-btn {
     grid-area: header-btn;
+    width: 162px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: var(--grape-purple);
+    color: white;
+    text-align: center;
+    position: relative;
 }
 .main-text {
     grid-area: main-text;
@@ -94,7 +151,6 @@ main {
 }
 
 .cryptoexch {
-    width: 193px;
     height: 35px;
     object-fit: contain;
     position: relative;
@@ -102,7 +158,6 @@ main {
 }
 
 .header-nav {
-    width: 555px;
     height: 19px;
     font-family: Roboto;
     font-size: 14px;
@@ -137,25 +192,9 @@ ul {
     text-decoration: none;
     color: #000000;
 }
- 
-.header-btn {
-    width: 162px;
-    height: 37px;
-    border-radius: 5px;
-    background-color: var(--grape-purple);
-    color: white;
-    text-align: center;
-    position: relative;
-    top: -7px;
-}
-
-.main-text {
-    margin-left: 142px;
-}
 
 .main-title {
-    width: 541px;
-    height: 96px;
+    width: 100%;
     font-family: Gotham;
     font-size: 40px;
     font-weight: bold;
@@ -167,8 +206,7 @@ ul {
 }
 
 .main-subtitle {
-    width: 444px;
-    height: 91px;
+    width: 80%;
     font-family: Roboto;
     font-size: 20px;
     font-weight: normal;
@@ -182,60 +220,41 @@ ul {
 }
 
 .trustpilot {
-    width: 145px;
-    height: 71px;
+    width: 27%;
     object-fit: contain;
 }
 
-.main-form {
-    width: 444px;
-    height: 495px;
-    border-radius: 5px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-}
-
 form {
-    padding: 40px 23px 28px 21px; 
+    padding: 40px 23px 28px 21px;
 }
 
 .main-form-legend {
-    width: 388px;
-    height: 21px;
     font-family: Gotham;
     font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
     color: #212121;
     margin: 0px;
 }
 
 .currency {
-    display: flex; 
+    display: flex;
     margin: 33px 0px;
 }
 
 .currency > div {
-    width: 126px;
+    width: 25%;
     border-radius: 3px;
-    border: solid 1px #efefef;
+    border: 0.5px solid black;
     margin-right: 16px;
     padding: 8px 19px;
+    display: flex;
+    cursor: pointer;
 }
 
 .currency > div:last-child {
     margin-right: 0px;
 }
 
-.bitcoin-visa, .bitcoin-etherium, .bitcoin-advcash {
-    display: flex;
-    cursor: pointer;
-}
-
-.bitcoin-visa > img, .bitcoin-etherium > img, .bitcoin-advcash > img{
+.bitcoin-card > img, .bitcoin-etherium > img, .bitcoin-advcash > img{
     flex: 1 0 auto;
 }
 
@@ -313,7 +332,6 @@ input, #receivedAmount {
     width: 50%;
 }
 
-
 .transferFee {
     margin-bottom: 23px;
     margin-top: 8px;
@@ -369,7 +387,7 @@ input[type="checkbox"] + label:before {
     width: 16px;
     height: 17px;
     color: transparent;
-} 
+}
 
 input[type="checkbox"]:checked + label:before {
     content: "\2714";
@@ -379,7 +397,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .submit {
-    width: 240px;
+    width: 59%;
     height: 42px;
     border-radius: 5px;
     background-color: var(--grape-purple);
@@ -390,77 +408,13 @@ input[type="checkbox"]:checked + label:before {
     outline: none;
     border: none;
     float: right;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
-select {
+.dd-selected-text, .dd-option-text {
     height: 19px;
     font-family: Roboto;
     color: #212121;
-    border: none;
-}
-
-option {
-    width: 248px;
-}
-
-.visa {
-     background-image: url(./img/card.png);
- }
-
-
-
-select {
-    width: 200px;
-}
-
- option {
-    padding-left: 20px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-}
-
-option:hover {
-    background-color: #eee;
-}
-
-.icon-visa {
-    background: url('./img/card.png') no-repeat;
-    background-size: 20px;
-    padding-left: 20px;
-    background-position: 0 1px;
-}
-
- 
-.icon-etherium {
-    background: url('./img/etherium.png') no-repeat;
-    background-size: 20px;
-    padding-left: 20px;
-    background-position: 0 1px;
-}
-
-.icon-advcash {
-    background: url('./img/advcash.png') no-repeat;
-    background-size: 20px;
-    padding-left: 20px;
-    background-position: 0 1px;
-}
-
-.icon-bitcoin {
-    background: url('./img/bitcoin.png') no-repeat;
-    background-size: 20px;
-    padding-left: 20px;
-    background-position: 0 1px;
-}
-
-select.icon-visa,
-select.icon-etherium,
-select.icon-advcash,
-select.icon-bitcoin {
-    padding-top: 2px;
-    padding-bottom: 3px;
-    padding-left: 16px;
-    background-position: 0 1px;
 }
 
 button {
@@ -471,5 +425,27 @@ button:hover {
     box-shadow: 0 0 10px 0 #331139;
 }
 
+.dd-option-image, .dd-selected-image {
+  width: 17px;
+  height: 17px;
+}
 
-    
+.dd-selected-image {
+   1margin-top: 5px;
+}
+
+.dd-selected {
+  padding: 0px !important;
+}
+
+.dd-select {
+  border: none !important;
+  background: white !important;
+}
+
+ul.dd-options {
+  left: -100%;
+  width: 200% !important;
+  border: none !important;
+  margin: 16px 0px !important;
+}
